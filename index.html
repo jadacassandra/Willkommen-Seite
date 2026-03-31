@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Mein Mini-Projekt</title>
+    <title>Jada Cassandra Tsakalofidou – Portfolio</title>
     <style>
         /* Dark Mode Elegant Style */
         body {
@@ -16,21 +16,34 @@
         h1 {
             color: #00bfff;
             font-size: 3em;
+            margin-bottom: 10px;
         }
         p {
             font-size: 1.2em;
             color: #cccccc;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            margin-top: 20px;
-            border: none;
-            border-radius: 5px;
+        a.button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
             background-color: #00bfff;
             color: #1e1e1e;
-            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
             transition: background-color 0.3s;
+        }
+        a.button:hover {
+            background-color: #0090cc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00bfff;
+            color: #1e1e1e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         button:hover {
             background-color: #0090cc;
@@ -38,15 +51,26 @@
     </style>
 </head>
 <body>
-    <h1>Willkommen!</h1>
-    <p id="text">Das ist mein kleines Mini-Projekt.</p>
-    <button onclick="changeText()">Klick mich!</button>
 
-    <script>
-        function changeText() {
-            const p = document.getElementById('text');
-            p.textContent = "Schön, Sie haben den Button geklickt!";
-        }
-    </script>
+<h1>Jada Cassandra Tsakalofidou</h1>
+<p>Fachinformatikerin für Anwendungsentwicklung – Bewerbungsportfolio</p>
+
+<h2>Meine Bewerbungsunterlagen</h2>
+<!-- Temporär ohne echte PDFs -->
+<a href="#" class="button">Lebenslauf (PDF)</a>
+<a href="#" class="button">Bewerbung (PDF)</a>
+<a href="#" class="button">Fachhochschulzeugnis (PDF)</a>
+    
+<h2>Kontaktiere mich</h2>
+<button onclick="showContact()">jadatsaka@gmail.com</button>
+<p id="contact-text"></p>
+
+<script>
+function showContact() {
+    const p = document.getElementById('contact-text');
+    p.textContent = "Meine E-Mail: deine.email@example.com";
+}
+</script>
+
 </body>
 </html>
